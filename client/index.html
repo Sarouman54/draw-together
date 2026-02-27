@@ -1,0 +1,48 @@
+<!-- client/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Draw Together</title>
+	<style>
+		body {
+			font-family: sans-serif;
+			text-align: center;
+			background: #2c3e50;
+			color: white;
+			margin: 0;
+			padding: 20px;
+		}
+
+		canvas {
+			background: white;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+			cursor: crosshair;
+			border-radius: 8px;
+		}
+
+		.controls {
+			margin-bottom: 20px;
+			font-size: 18px;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Draw Together</h1>
+
+	<div class="controls">
+		<label for="colorPicker">Choisis ta couleur : </label>
+		<input type="color" id="colorPicker" value="#000000">
+	</div>
+	
+	<canvas id="whiteboard" width="800" height="600"></canvas>
+
+	<script src="https://cdn.socket.io/4.8.3/socket.io.min.js"></script>
+	<script src="./app.js" defer></script>
+</body>
+
+</html>
